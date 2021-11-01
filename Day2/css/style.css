@@ -1,0 +1,73 @@
+/* my CSS styles */
+/* https://color.adobe.com/create/color-wheel */
+/* https://www.colorzilla.com/ */
+/* https://jigsaw.w3.org/css-validator/ */
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Change font family */
+  background-color: #ffffcc; /* Change background color #RRGGBB */
+}
+
+img {
+  border: 10px solid green; /* Adds border around elements */
+}
+
+h1 {
+  border: 5px dotted red; /* Adds border around elements */
+}
+
+blockquote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3rem; /* Change font size */
+  font-style: italic; /* Change the style of your font */
+  text-align: center; /* Centers text on a web page */
+}
+
+cite {
+  font-size: 1.5rem;
+  font-weight: bold; /* Change boldness of font */
+}
+
+.bigbold {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#myid {
+  color: #003f63;
+}
+
+h2,
+h3 {
+  color: orange;
+}
+
+ol {
+  color: green;
+}
+
+/* :link = unvisited link */
+/* :visited = visited link */
+
+ul a:link {
+  font-weight: bold;
+  text-decoration: none; /* remove underline from links */
+  color: lightblue;
+}
+
+a:visited {
+  color: green;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+  background-color: #777;
+}
+
+/* a tags that have a class of harvard */
+a.harvard:link {
+  color: maroon;
+}
