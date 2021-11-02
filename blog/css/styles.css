@@ -30,11 +30,107 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .posted {
   font-size: 0.8rem;
   color: #89a611;
 }
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.leftheader {
+  flex-basis: 40%;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.rightheader {
+  flex-basis: 60%;
+  margin-top: 3.75rem;
+  padding-left: 0.5rem;
+}
+
+.rightheader h1 {
+  margin: 0;
+  color: #da0090;
+  font-size: 3rem;
+}
+
+.rightheader p {
+  margin-top: 0.5rem;
+}
+
+nav {
+  border-bottom: 1px solid #e6f111;
+  border-top: 1px solid #da0090;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: #73352e;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background-color: black;
+  color: yellow;
+  text-decoration: none;
+}
+
+article {
+  margin: 2rem 0;
+}
+
+article img {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  border-radius: 1rem;
+}
+
+article:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section {
+  border-bottom: #da0090;
+  margin-bottom: 0.3rem;
+}
+
 footer {
   text-align: center;
   font-size: 0.8rem;
+  border-top: 1px solid #861f11;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer li {
+  display: inline-block; /* similar to flex */
 }
