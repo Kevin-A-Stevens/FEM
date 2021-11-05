@@ -14,37 +14,46 @@
           one of our fine UFOs.
         </p>
         <form>
-          <h2>Your contact information</h2>
-          <!-- for= and id= should be the same -->
-          <!-- name= field is needed for the processing script on the server -->
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" />
+          <!-- fieldset places a nice box around your form and is good for accessability -->
+          <fieldset>
+            <!-- legend ads a title to your form and describes our fieldset -->
+            <!-- fieldset and legend are used together -->
+            <legend>Your contact information</legend>
+            <!-- for= and id= should be the same -->
+            <!-- name= field is needed for the processing script on the server -->
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" />
 
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" name="phone" />
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" />
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </fieldset>
 
-          <h2>About your abduction</h2>
-          <p>Requested date</p>
-          <p>How many people would you like abducted?</p>
-          <p>What type of UFO do you prefer?</p>
-          <ul>
-            <li>Classic oval UFO</li>
-            <li>Star Wars-style Imperial cruiser</li>
-            <li>Battlestar Galactica-style Viper</li>
-            <li>Borg-style cube</li>
-          </ul>
-          <p>What type of abduction experience do you want?</p>
-          <ul>
-            <li>Tour of the solar system</li>
-            <li>Alien dinner and discussion</li>
-            <li>Alien dance lessons</li>
-            <li>Whale watching</li>
-          </ul>
-          <p>Special requests:</p>
-          <p>Add me to your email list</p>
+          <fieldset>
+            <legend>About your abduction</legend>
+            <label for="date">Requested date</label>
+            <input type="date" id="date" name="date" />
+            <label for="qty">How many people would you like abducted?</label>
+            <input type="number" id="qty" name="qty" />
+            <p>What type of UFO do you prefer?</p>
+            <ul>
+              <li>Classic oval UFO</li>
+              <li>Star Wars-style Imperial cruiser</li>
+              <li>Battlestar Galactica-style Viper</li>
+              <li>Borg-style cube</li>
+            </ul>
+            <p>What type of abduction experience do you want?</p>
+            <ul>
+              <li>Tour of the solar system</li>
+              <li>Alien dinner and discussion</li>
+              <li>Alien dance lessons</li>
+              <li>Whale watching</li>
+            </ul>
+            <p>Special requests:</p>
+            <p>Add me to your email list</p>
+          </fieldset>
         </form>
       </section>
       <aside>
