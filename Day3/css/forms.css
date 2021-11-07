@@ -14,6 +14,11 @@ body {
   background-image: url(../img/galaxy.jpg);
 }
 
+h1,
+legend {
+  font-family: "Aguafina Script", cursive;
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
