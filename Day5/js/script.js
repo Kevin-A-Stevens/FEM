@@ -116,3 +116,74 @@ console.log(finalAnswer2);
 // Variables defined outside of a function are global and can be used by functions
 // This is the same for loops - let i = 0 is only in scope for the for loop
 // Where a variable is declared matters
+
+// Builtin functions
+const sentenceA = "This Has Weird Casing";
+console.log(sentenceA.toLowerCase());
+console.log(sentenceA.toUpperCase());
+console.log(Math.round(5.6));
+console.log(Math.floor(5.1));
+console.log(Math.ceil(5.1));
+console.log(Math.max(5, 6, 8, 1));
+console.log(Math.min(5, 6, 8, 1));
+
+const name = "Kevin Stevens";
+console.log(name.substr(6, 3)); // (startPosition, howMany), howMany is blank = to end of string
+
+// Objects
+
+const person = {
+  name: "Kevin Stevens",
+  city: "Hampshire",
+  state: "Tennessee",
+  ageRange: "55-65",
+};
+
+console.log(person);
+console.log(person.name);
+
+function suggestMusic(person) {
+  if (person.ageRange === "25-35") {
+    console.log("Rock-N-Roll");
+  } else if (person.ageRange === "65-75") {
+    console.log("Country");
+  } else {
+    console.log("Soft Rock");
+  }
+}
+suggestMusic(person);
+
+const dog = {
+  name: "dog",
+  speak() {
+    console.log("woof woof");
+  },
+};
+
+dog.speak();
+
+// Arrays
+
+const daysOfTheWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+console.log(daysOfTheWeek);
+console.log(daysOfTheWeek[4]);
+
+// Array Methods
+console.log(daysOfTheWeek.length);
+console.log(daysOfTheWeek.join(" | ")); // join() will use commas
+daysOfTheWeek.push("January"); // Adds to end of Array
+console.log(daysOfTheWeek);
+daysOfTheWeek.pop(); // Removes last item from array
+console.log(daysOfTheWeek);
+
+const subarray = daysOfTheWeek.splice(2, 1);
+console.log(subarray);
