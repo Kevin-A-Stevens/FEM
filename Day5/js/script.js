@@ -187,3 +187,48 @@ console.log(daysOfTheWeek);
 
 const subarray = daysOfTheWeek.splice(2, 1);
 console.log(subarray);
+
+// Looping over Arrays - for and forEach method
+
+console.log("--------------------------");
+
+const cities = ["Seattle", "Nashville", "Tampa", "Pittsburgh", "San Francisco"];
+
+for (let i = 0; i < cities.length; i++) {
+  console.log(cities[i]);
+}
+
+console.log("--------------------------");
+
+for (let i = 0; i < cities.length; i++) {
+  console.log(cities[i].toUpperCase());
+}
+
+console.log("FOREACH");
+
+// forEach is a function that accepts a function
+
+// forEach is a function that accepts a function
+cities.forEach(function (city) {
+  console.log(city);
+});
+
+console.log("FOREACH");
+
+cities.forEach(function (city, index) {
+  console.log(city, index);
+});
+
+// map creates a new array
+// use map when you have an array and want to transfer that array into something else
+console.log("MAP");
+
+const newCities = cities.map(function (city) {
+  return city.toUpperCase;
+});
+
+console.log(newCities);
+
+newCities.forEach(function (city) {
+  console.log(city);
+});
