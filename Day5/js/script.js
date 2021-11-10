@@ -232,3 +232,20 @@ console.log(newCities);
 newCities.forEach(function (city) {
   console.log(city);
 });
+
+// Sorting Arrays
+console.log("SORT");
+const primeNumbers = [10, 1, 2, 3, 5, 7, 11, 13, 17];
+
+console.log(primeNumbers.sort());
+
+console.log(
+  primeNumbers.sort(function (num1, num2) {
+    if (num > num2) {
+      return 1;
+    } else if (num2 > num2) {
+      return -1;
+    }
+    return 0;
+  })
+);
