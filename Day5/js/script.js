@@ -249,3 +249,33 @@ console.log(
     return 0;
   })
 );
+
+// using an arrow function with map
+
+const strings = ["a", "C", "B", "d", "e"];
+
+strings.map((string) => string.toUpperCase()).sort();
+
+// AND && and OR || operators
+
+if (2 !== 3) {
+  console.log("These are not equal");
+}
+
+const x = 5;
+const y = 10;
+const z = 11;
+
+const isTrue = true;
+
+if (x !== y) {
+  console.log("These are not equal");
+}
+
+if (x === y && y === z && isTrue) {
+  console.log("These are all equal");
+}
+
+if (isTrue || x === z) {
+  console.log("This is an or statement");
+}
