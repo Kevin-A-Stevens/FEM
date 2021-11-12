@@ -279,3 +279,14 @@ if (x === y && y === z && isTrue) {
 if (isTrue || x === z) {
   console.log("This is an or statement");
 }
+
+// Testing - writing code to make sure your code works
+// An example of a test case. He uses Jasmine
+function addTwo(list) {
+  const newList = [];
+
+  for (let i = 0; i < list.length; i++) {
+    newList.push(list[i] + 2);
+  }
+  return newList;
+}
