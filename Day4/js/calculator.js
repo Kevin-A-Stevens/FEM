@@ -6,7 +6,7 @@
 // Keep track of numbers
 let runningTotal = 0;
 
-let buffer = "0";
+let buffer = "0"; // Keep track of what is on screen
 
 let previousOperator; // represent what operator they clicked last (+ - / *)
 
@@ -20,9 +20,15 @@ function buttonClick(value) {
     // This is a number
     handleNumber(value);
   }
+  screen.innerText = buffer; // Add pressed number strings to screen
 }
 
-function handleSymbol(symbol) {}
+function handleSymbol(symbol) {
+  if (symbol === "C") {
+    buffer = "0";
+    runningTotal = "0";
+  }
+}
 
 function handleNumber(numberString) {
   if (buffer === "0") {
