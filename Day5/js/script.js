@@ -290,3 +290,56 @@ function addTwo(list) {
   }
   return newList;
 }
+
+// testing with Arrays
+function findLargestNumber(list) {
+  if (list.length === 0) {
+    return undefined;
+  }
+
+  let largest = list[0];
+
+  for (let i = 1; i < list.length; i++) {
+    if (list[i] > largest) {
+      largest = list[i];
+    }
+  }
+
+  return largest;
+}
+
+// Testing with Objects
+
+function getAverageAge(list) {
+  let sum = 0;
+
+  for (let i = 0; i < list.length; i++) {
+    sum += list[i].age;
+  }
+
+  return sum / list.length;
+}
+
+// Testing with sort
+
+// Ascending order
+function sort(list) {
+  const sortedList = list.sort(function (num1, num2) {
+    if (num1 > num2) {
+      return 1;
+    } else if (num1 < num2) {
+      return -1;
+    }
+    return 0;
+  });
+  return sortedList;
+}
+
+// Another way
+function sort2(list) {
+  const sortedList2 = list.sort(function (num1, num2) {
+    return num1 - num2;
+  });
+
+  return sortedList2;
+}
