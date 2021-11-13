@@ -343,3 +343,46 @@ function sort2(list) {
 
   return sortedList2;
 }
+
+// The DOM
+// JavaScript can override CSS as it is more specific
+// query selector = just the first instance
+
+// let h2s = document.querySelectorAll('h2') returns a NodeList
+// map and forEach do not work on a NodeList so you have to use a for loop
+// for (let i = 0; i < h2s.length; i++) { h2s[i].style.color = 'papayawhip';}
+// x = Array.from(h2s) = will turn the NodeList into an Array. You can then use map/forEach
+
+// Event Listeners maker your pages interactive
+// Example
+// <button class="event-button">Click Me</button>
+// <script>
+//   const button = document.querySelector('.event-button');
+//   button.addEventListener('click', function() { // callback function
+//     alert('Hey There!');
+//   });
+// </script>
+
+// Install a screen reader on your computer you can use to test your web site
+// events = click, keyup (listen for input), keydown
+
+// Event Delegation
+
+// The below is called Event Bubbling
+// <div class="button-container">
+// <button>1</button>
+// <button>2</button>
+// <button>3</button>
+// <button>4</button>
+// <button>5</button>
+// </div>
+
+// <script>
+// document.querySelector('.button-container').addEventListener('click', function(event) {
+//   if (event.target.tagName === 'BUTTON') {
+//    alert(`You clicked on button $(event.target.innerText)`);
+//   }
+// });
+// </script>
+
+// All event listeners take in an event
