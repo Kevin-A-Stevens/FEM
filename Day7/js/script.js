@@ -55,3 +55,7 @@ listen(document, "mouseup touchend").start(() => {
     damping: 10,
   }).start(ballXY);
 });
+
+// AJAX = Asynchronous JavaScript and XML
+// JSON = JavaScript Object Notation
+// https://dog.ceo/dog-api/
