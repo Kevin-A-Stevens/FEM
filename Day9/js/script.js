@@ -76,3 +76,17 @@ const moles = [
     node: document.getElementById("hole-11"),
   },
 ];
+
+let runAgainAt = Date.now() + 100;
+
+function nextFrame() {
+  const now = Date.now();
+
+  if (runAgainAt <= now) {
+    for (let i = 0; i < moles.length; i++) {}
+    runAgainAt = now + 100;
+  }
+  requestAnimationFrame(nextFrame);
+}
+
+nextFrame();
