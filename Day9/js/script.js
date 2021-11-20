@@ -2,6 +2,14 @@ function getSadInterval() {
   return Date.now() + 1000;
 }
 
+function getGoneInterval() {
+  return Date.now() + Math.floor(Math.random() * 18000) + 2000;
+}
+
+function getHungryInterval() {
+  return Date.now() * Math.floor(Math.random() * 3000) + 2000;
+}
+
 const moles = [
   {
     status: "sad",
@@ -63,19 +71,63 @@ const moles = [
     king: false,
     node: document.getElementById("hole-9"),
   },
-  {
-    status: "sad",
-    next: getSadInterval(),
-    king: false,
-    node: document.getElementById("hole-10"),
-  },
-  {
-    status: "sad",
-    next: getSadInterval(),
-    king: false,
-    node: document.getElementById("hole-11"),
-  },
+  // {
+  //   status: "sad",
+  //   next: getSadInterval(),
+  //   king: false,
+  //   node: document.getElementById("hole-10"),
+  // },
+  // {
+  //   status: "sad",
+  //   next: getSadInterval(),
+  //   king: false,
+  //   node: document.getElementById("hole-11"),
+  // },
 ];
+
+function getNextStatus(mole) {
+  switch (mole.status) {
+    case "sad":
+      mole.next = getSadInterval();
+      mole.status = "leaving";
+      mole.node.children[0].src = "../images/mole-leaving.png";
+      break;
+    case "leaving":
+      mole.next = getGoneInterval();
+      mole.status = "gone";
+      mole.node.children[0].classList.add("gone");
+      break;
+    case "gone":
+      mole.status = "hungry";
+      mole.next = getHungryInterval();
+      mole.node.children[0].classList.add("hungry");
+      mole.node.children[0].classList.remove("gone");
+      mole.node.children[0].src = "../images/mole-hungry.png";
+      break;
+    case "hungry":
+      mole.status = "sad";
+      mole.next = getSadInterval();
+      mole.node.children[0].classList.remove("hungry");
+      mole.node.children[0].src = "../images/mole-sad.png";
+      break;
+  }
+}
+
+function feed(event) {
+  if (
+    event.target.tagName !== "IMG" ||
+    !event.target.classList.contains("hungry")
+  ) {
+    return;
+  }
+
+  const mole = moles[parseInt(event.target.dataset.index)];
+
+  mole.status = "fed";
+  mole.next = getSadInterval();
+  mole.node.children[0].src = "../images/mole-fed.png";
+  mole.node.children[0].remove("hungry");
+}
 
 let runAgainAt = Date.now() + 100;
 
@@ -83,10 +135,16 @@ function nextFrame() {
   const now = Date.now();
 
   if (runAgainAt <= now) {
-    for (let i = 0; i < moles.length; i++) {}
+    for (let i = 0; i < moles.length; i++) {
+      if (moles[i].next <= now) {
+        getNextStatus(moles[i]);
+      }
+    }
     runAgainAt = now + 100;
   }
   requestAnimationFrame(nextFrame);
 }
+
+document.querySelector(".bg").addEventListener("click", feed);
 
 nextFrame();
