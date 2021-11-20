@@ -2,21 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feed-A-Mole</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mole Game</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
-    // holes and moles section.
     <section class="bg">
+      <div class="worm-box">
+        <div style="width: 5%" class="worm-container">
+          <img class="worm" src="./images/worm.png" alt="worm meter" />
+        </div>
+      </div>
       <div class="hole-container">
         <div class="hole" id="hole-0">
           <img
             data-index="0"
-            class="mole"
             src="./images/king-mole-hungry.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -24,9 +29,9 @@
         <div class="hole" id="hole-1">
           <img
             data-index="1"
-            class="mole"
             src="./images/king-mole-fed.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -34,9 +39,9 @@
         <div class="hole" id="hole-2">
           <img
             data-index="2"
-            class="mole"
             src="./images/king-mole-hungry.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -44,9 +49,9 @@
         <div class="hole" id="hole-3">
           <img
             data-index="3"
-            class="mole"
             src="./images/king-mole-sad.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -54,9 +59,9 @@
         <div class="hole" id="hole-4">
           <img
             data-index="4"
-            class="mole"
             src="./images/king-mole-leaving.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -64,9 +69,9 @@
         <div class="hole" id="hole-5">
           <img
             data-index="5"
-            class="mole"
             src="./images/mole-hungry.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -74,9 +79,9 @@
         <div class="hole" id="hole-6">
           <img
             data-index="6"
-            class="mole"
             src="./images/mole-fed.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -84,9 +89,9 @@
         <div class="hole" id="hole-7">
           <img
             data-index="7"
-            class="mole"
             src="./images/mole-sad.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -94,9 +99,9 @@
         <div class="hole" id="hole-8">
           <img
             data-index="8"
-            class="mole"
             src="./images/mole-leaving.png"
             alt="mole"
+            class="mole"
           />
         </div>
       </div>
@@ -104,34 +109,14 @@
         <div class="hole" id="hole-9">
           <img
             data-index="9"
-            class="mole"
             src="./images/king-mole-hungry.png"
-            alt="mole"
-          />
-        </div>
-      </div>
-      <div class="hole-container">
-        <div class="hole" id="hole-10">
-          <img
-            data-index="10"
+            alt="happy mole"
             class="mole"
-            src="./images/mole-hungry.png"
-            alt="mole"
-          />
-        </div>
-      </div>
-      <div class="hole-container">
-        <div class="hole" id="hole-11">
-          <img
-            data-index="11"
-            class="mole"
-            src="./images/mole-hungry.png"
-            alt="mole"
           />
         </div>
       </div>
     </section>
-
+    <img class="win" src="./images/win.png" alt="mole" />
     <script src="./js/script.js"></script>
   </body>
 </html>

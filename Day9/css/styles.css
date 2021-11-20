@@ -2,16 +2,17 @@
   box-sizing: border-box;
 }
 
-/* Change cursor on web page */
 body {
   cursor: url(../images/cursor.png), default;
   background-color: #c0c86d;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   height: 100vh;
+  width: 100vw;
 }
 
 .bg {
@@ -26,9 +27,9 @@ body {
 }
 
 .hole {
-  background-color: black;
+  background: black;
   border-radius: 50%;
-  overflow: visible; /* What happens to the items inside if they are larger than the area */
+  overflow: visible;
   width: 267px;
   height: 267px;
 }
@@ -46,9 +47,36 @@ body {
 }
 
 .hungry {
-  cursor: url(../images/cursor-worm.png), default;
+  cursor: url(../images/worm.png), pointer;
 }
 
 .gone {
   display: none;
+}
+
+.worm {
+  width: 1660px;
+}
+
+.worm-container {
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+}
+
+.worm-box {
+  width: 1660px;
+}
+
+.win {
+  max-width: 100vw;
+  max-height: 100vh;
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
